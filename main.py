@@ -35,7 +35,8 @@ def get_cleaned_text(tweet):
     cleaned_text = re.sub(r"@\w+", "", text).strip()
     return cleaned_text
 
-def run_eve():
+# def run_eve():
+while True:
     with open("file.txt", "r") as f: last_id = f.read().strip()
     data = fetch_mentions(last_id)
     # print(data)
@@ -52,4 +53,4 @@ def run_eve():
     print("====================Sleeping 15mins====================")
     time.sleep(900)
     
-run_eve()
+# run_eve()
